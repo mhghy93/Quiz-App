@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Northeast India GK Quiz</string>
+
+    <!--Question 1 of the quiz-->
+    <string name="qno1">Q1: The Yarlung Zangbo river,in India,is known as</string>
+    <string name="qno1_opA">Indus</string>
+    <string name="qno1_opB">Brahmaputra</string>
+    <string name="qno1_opC">Ganga</string>
+    <string name="qno1_opD">Kaveri</string>
+
+    <!--Question 2 of the quiz-->
+    <string name="qno2">Q2: The oldest oil refinery in India is at</string>
+    <string name="qno2_opA">Haldia, near Kolkata</string>
+    <string name="qno2_opB">Noonmati, Assam</string>
+    <string name="qno2_opC">Digboi, Assam</string>
+    <string name="qno2_opD">Koyali, near Baroda </string>
+
+    <!--Question 3 of the quiz-->
+    <string name="qno3">Q3: Tea is grown much in</string>
+    <string name="qno3_opA">Tamil Nadu</string>
+    <string name="qno3_opB">West Bengal</string>
+    <string name="qno3_opC">Assam</string>
+    <string name="qno3_opD">Kerala</string>
+
+    <!--Question 4 of the quiz-->
+    <string name="qno4">Q4: In which part of India is known as the Land of Sunrise?</string>
+    <string name="qno4_opA">Meghalaya</string>
+    <string name="qno4_opB">Arunachal Pradesh</string>
+    <string name="qno4_opC">Mizoram</string>
+    <string name="qno4_opD">Nagaland</string>
+
+    <!--Question 5 of the quiz-->
+    <string name="qno5">Q5: The animal shown in the picture is found in which National Park/WildLife Sanctuary in India?</string>
+    <string name="qno5_opA">Kaziranga National Park</string>
+    <string name="qno5_opB">Pobitora Wildlife Sanctuary</string>
+    <string name="qno5_opC">Jim Corbett National Park</string>
+    <string name="qno5_opD">Great Himalayan National Park</string>
+
+    <!--Question 6 of the quiz-->
+    <string name="qno6">Q6: How many states are there in North-East India?</string>
+    <string name="qno6_texthint">Enter your answer in text only</string>
+
+    <string name="submit">SUBMIT</string>
+    <string name="reset">RESET</string>
+
+</resources>
