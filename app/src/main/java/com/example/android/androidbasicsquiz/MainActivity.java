@@ -10,10 +10,10 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    RadioButton questionOneOptionB, questionTwoOptionC, questionThreeOptionC, questionFourOptionB;
-    CheckBox questionFiveOptionA, questionFiveOptionB;
-    EditText questionSixAns;
-    int totalScore = 0;
+    private RadioButton questionOneOptionB, questionTwoOptionC, questionThreeOptionC, questionFourOptionB;
+    private CheckBox questionFiveOptionA, questionFiveOptionB, questionFiveOptionC, questionFiveOptionD;
+    private EditText questionSixAns;
+    private int totalScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +41,25 @@ public class MainActivity extends AppCompatActivity {
 
         questionFiveOptionA = (CheckBox) findViewById(R.id.q5_optionA);
         questionFiveOptionB = (CheckBox) findViewById(R.id.q5_optionB);
+        questionFiveOptionC = (CheckBox) findViewById(R.id.q5_optionC);
+        questionFiveOptionD = (CheckBox) findViewById(R.id.q5_optionD);
         Boolean answerFiveChoiceOne = questionFiveOptionA.isChecked();
         Boolean answerFiveChoiceTwo = questionFiveOptionB.isChecked();
-        checkDoubleChoiceAnswer(answerFiveChoiceOne, answerFiveChoiceTwo);
+        Boolean answerFiveChoiceThree = questionFiveOptionC.isChecked();
+        Boolean answerFiveChoiceFour = questionFiveOptionD.isChecked();
+        checkDoubleChoiceAnswer(answerFiveChoiceOne, answerFiveChoiceTwo, answerFiveChoiceThree, answerFiveChoiceFour);
 
         questionSixAns = (EditText) findViewById(R.id.inp_ans6);
         String answerSix = questionSixAns.getText().toString().toLowerCase();
         checkTypedAnswer(answerSix);
 
-        Toast.makeText(MainActivity.this, "You scored: " + totalScore + " out of 30", Toast.LENGTH_LONG).show();
+        if (totalScore == 30) {
+            Toast.makeText(MainActivity.this, "Congratulations!You answered all the questions correctly.You scored: 30 out of 30", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(MainActivity.this, "You scored: " + totalScore + " out of 30", Toast.LENGTH_LONG).show();
+        }
+
+        totalScore = 0;
     }
 
 
@@ -60,15 +70,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void checkDoubleChoiceAnswer(Boolean answerOne, Boolean answerTwo) {
-        if (answerOne && answerTwo) {
+    public void checkDoubleChoiceAnswer(Boolean answerOne, Boolean answerTwo, Boolean answerThree, Boolean answerFour) {
+        if (answerOne && answerTwo && !answerThree && !answerFour) {
             totalScore += 5;
         }
     }
 
 
     public void checkTypedAnswer(String answer) {
-        if (answer.equals("eight")) {
+        if (answer.equalsIgnoreCase("eight")) {
             totalScore += 5;
         }
     }
